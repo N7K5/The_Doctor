@@ -1,0 +1,28 @@
+{
+  "name": "the_doctor",
+  "version": "1.0.0",
+  "description": "Final Year Project of B.Tech",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N7K5/The_Doctor.git"
+  },
+  "keywords": [
+    "CNN",
+    "Neural",
+    "Network",
+    "Doctor",
+    "Segmentation",
+    "image",
+    "recognization"
+  ],
+  "author": "John Chakder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N7K5/The_Doctor/issues"
+  },
+  "homepage": "https://github.com/N7K5/The_Doctor#readme"
+}
