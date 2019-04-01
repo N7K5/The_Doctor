@@ -2,6 +2,11 @@
 const fs= require("fs");
 const os= require("os");
 
+/**
+ * a console print function
+ * maybe for writing in a temp file
+ * @param {string} string string to print
+ */
 function print(string) {
     console.log(string);
 }

@@ -1,5 +1,5 @@
 const tf= require("@tensorflow/tfjs-node");
-import * as params from ("./params")
+const params= require("./params");
 
 /**
  * make model function 
@@ -59,3 +59,15 @@ function makeModel() {
 module.exports= {
     make: makeModel,
 };
+
+
+
+const optimizer = 'rmsprop';
+
+let m= makeModel();
+
+    m.compile({
+        optimizer,
+        loss: 'categoricalCrossentropy',
+        metrics: ['accuracy'],
+    });

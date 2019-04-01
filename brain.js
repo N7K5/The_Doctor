@@ -1,19 +1,19 @@
 
-import * as params from ("./params");
+const param= require("./params");
 import { parseAxisParam } from "@tensorflow/tfjs-core/dist/util";
-import * as tf from ("@tensorflow/tfjs-node");
-import * as util from ("./utils");
+const tf= require("@tensorflow/tfjs-node");
+const util= require("./utils");
 
 /** 
  * Compile & train neural network model
  *
  * @param {tf.Model} model tensorflow neural model
- * @param {callback} onIteration callback to execute every 10 batches & epoc
  * @param {object} trainData train data as object with xs and labels
+ * @param {callback} onIteration callback to execute every 10 batches & epoc
  *
  */
 
-async function train(model, onIteration, trainData) {
+async function train(model, trainData, onIteration) {
 
     let trainedBatchCount= 0;
 
