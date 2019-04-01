@@ -145,34 +145,25 @@ function readDCM(file) {
             return console.log(err);
         }
         data= new Uint8Array(data);
-        
         try
         {
-        // Parse the byte array to get a DataSet object that has the parsed contents
+            // Parse the byte array to get a DataSet object that has the parsed contents
             var dataSet = dicomParser.parseDicom(data);
-
-            // access a string element
-            var studyInstanceUid = dataSet.string('x0020000d');
 
             // get the pixel data element (contains the offset and length of the data)
             var pixelDataElement = dataSet.elements.x7fe00010;
-            console.log(dataSet.byteArray.length);
 
             // create a typed array on the pixel data (this example assumes 16 bit unsigned data)
             var pixelData = new Uint16Array(dataSet.byteArray.buffer, pixelDataElement.dataOffset);
 
             console.log(pixelData.toString());
-
-            //console.log(dataSet);
         }
         catch(ex)
         {
         console.log('Error parsing byte stream', ex);
         }
-
-
     })
-
 }
 
 readDCM("/home/john/Desktop/000143.dcm");
+Syncing Required... file store
